@@ -1,0 +1,49 @@
+﻿@model UpdateContactDto
+@{
+    ViewData["Title"] = "UpdateContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title"> İletişim işlemleri </h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Yeni Hakkımızda Yazı Girişi</div>
+                        </div>
+                        <input type="hidden" asp-for="ContactId" />
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="ContactMail">Başlığı giriniz</label>
+                                <input type="email" class="form-control" asp-for="ContactMail" id="ContactMail">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="ContactLocation">Görselin linkini giriniz</label>
+                                <input type="text" class="form-control" asp-for="ContactLocation" id="ContactLocation">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="CFooterDescription">Açıklamayı giriniz</label>
+                                <textarea rows="5" class="form-control" asp-for="CFooterDescription" id="CFooterDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="ContactPhone">ContactPhone giriniz</label>
+                                <textarea rows="5" class="form-control" asp-for="ContactPhone" id="ContactPhone"></textarea>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <button class="btn btn-primary">İletişim Güncelle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
